@@ -77,7 +77,7 @@ function installENV()
             $sys =   shell_exec(bash.'&& sudo dpkg -l sysstat');
             if(strpos($sys, 'dpkg-query: não foram encontrados pacotes coincidindo com')!=false)
             {
-                echo 'dpkg nãoo achou sysstat 12.5 '.PHP_EOL;
+                echo 'dpkg não achou sysstat 12.5 '.PHP_EOL;
                 downloadFile('http://ftp.de.debian.org/debian/pool/main/s/sysstat/sysstat_12.5.2-2_amd64.deb',getcwd().DIRECTORY_SEPARATOR.'sysstat_12.5.2-2_amd64.deb');
                 shell_exec(bash.'&& sudo apt install ./sysstat_12.5.2-2_amd64.deb  -y');
             }            
